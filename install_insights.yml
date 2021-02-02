@@ -1,9 +1,9 @@
 ---
 - hosts: all
   collections:
-    - redhatinsights.insights
+    - redhat.insights
     
   tasks:
-    - import_role: 
+    - include_role: 
         name: insights_client
       when: ansible_os_family == 'RedHat'
