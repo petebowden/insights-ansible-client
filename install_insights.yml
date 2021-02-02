@@ -5,5 +5,5 @@
     
   tasks:
     - include_role: 
-        name: insights_client
+        name: redhat.insights.insights_client
       when: ansible_os_family == 'RedHat'
