@@ -1,3 +1,9 @@
+---
 - hosts: all
-  roles:
-    - { role: RedHatInsights.insights-client, when: ansible_os_family == 'RedHat' }
+  collections:
+    - redhatinsights.insights
+    
+  tasks:
+    - include_role: 
+        name: insights_client
+      when: ansible_os_family == 'RedHat'
